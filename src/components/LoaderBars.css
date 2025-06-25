@@ -1,0 +1,45 @@
+/* src/components/LoaderBars.css */
+.loader-bars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    gap: 6px;
+}
+
+.loader-bars span {
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    background: white;
+    border-radius: 3px;
+    animation: barsAnim 1s infinite ease-in-out;
+}
+
+.loader-bars span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loader-bars span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loader-bars span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.loader-bars span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes barsAnim {
+
+    0%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(2.2);
+    }
+}
